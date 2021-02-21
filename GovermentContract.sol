@@ -18,4 +18,6 @@ contract GovermentContract {
 	function getTransaction(uint _index) public returns(address, address, uint){
 		return (transactionLog[_index].from, transactionLog[_index].to, transactionLog[_index].id);
 	}
+
+	
 }
