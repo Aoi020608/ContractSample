@@ -1,9 +1,15 @@
 import './Destroyable.sol';
 import './Ownable.sol';
 
+interface GovermentInterface {
+	function addTransaction(address _from, address _to, uint _amount) external;
+}
+
 pragma solidity 0.7.8;
 
 contract Bank is Ownable, Destroyable {
+
+	GovermentInterface govermentInstance = GovermentInterface(contractAddress);
 
 	mapping(address => uint) balance;
 

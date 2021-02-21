@@ -1,4 +1,5 @@
 contract Ownable {
+	
 	address internal owner;
 
 	modifier onlyOwner {
